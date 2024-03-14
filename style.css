@@ -555,32 +555,8 @@ footer .footer-bottom {
 		--body-text-500: 0.875rem;
 		--body-text-700: 0.75rem;
 	}
-
-	/* offer */
-	.offer .offer-con {
-		grid-template-columns: repeat(2, 1fr);
-	}
-
-	.offer .offer-con .offer-title {
-		grid-column: 1/3;
-	}
-	/* offer end*/
-
-	/* courses */
-	.courses .courses-con {
-		grid-template-columns: repeat(2, 1fr);
-	}
-	/* courses ends */
-
-	/* faq */
-	.faq-con {
-		grid-template-columns: repeat(2, 1fr);
-	}
-	/* faq ends */
-}
-
-@media screen and (min-width: 1024px) {
-	/* header */
+	
+		/* header */
 	.header {
 		align-items: center;
 		display: grid !important;
@@ -635,29 +611,36 @@ footer .footer-bottom {
 		margin-left: auto;
 	}
 	/* header ends */
-
-	/* welcome-hero */
+	
+		/* welcome-hero */
 	.welcome-hero {
 		grid-template-columns: repeat(2, 1fr);
 	}
 	/* welcome-hero ends */
+
 	/* offer */
 	.offer .offer-con {
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 	}
 
 	.offer .offer-con .offer-title {
 		grid-column: 1/3;
 	}
-
 	/* offer end*/
+
 	/* courses */
 	.courses .courses-con {
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 	}
 	/* courses ends */
 
-	/* Footer*/
+	/* faq */
+	.faq-con {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	/* faq ends */
+	
+		/* Footer*/
 	footer .footer-content {
 		align-items: start;
 		grid-template-columns: 2fr 1fr 1.5fr 2fr;
@@ -683,11 +666,26 @@ footer .footer-bottom {
 		justify-content: space-between !important;
 	}
 
-	/* footer .footer-bottom p:first-child {
-		order: 1;
-	}
-	footer .footer-bottom .ft-links {
-		order: 2;
-	} */
 	/* Footer ends*/
+}
+
+@media screen and (min-width: 1024px) {
+
+	/* offer */
+	.offer .offer-con {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.offer .offer-con .offer-title {
+		grid-column: 1/3;
+	}
+
+	/* offer end*/
+	/* courses */
+	.courses .courses-con {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	/* courses ends */
+
+
 }
