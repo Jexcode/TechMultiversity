@@ -189,6 +189,9 @@ p {
 	margin: auto !important;
 	max-width: 1200px;
 }
+.round {
+	border-radius: 50%;
+}
 
 .rounded-0 {
 	border-radius: 0;
@@ -307,16 +310,16 @@ p {
 }
 
 .header .navi .navlinks > li {
-  padding-top: 0.5rem;
+	padding-top: 0.5rem;
 	transition: var(--transition);
 }
 
-.header .navi .navlinks > li  a{
-  display: block;
+.header .navi .navlinks > li a {
+	display: block;
 }
 
-.header .navi .navlinks > li > .btn{
-  display: inline-block;
+.header .navi .navlinks > li > .btn {
+	display: inline-block;
 }
 
 .header .navi .navlinks > li:hover,
@@ -326,11 +329,10 @@ p {
 	font-weight: 600;
 }
 
-.header .navi .navlinks  .btn-box:hover, 
-.header .navi .navlinks  .btn-box:focus{
-  background: none;
+.header .navi .navlinks .btn-box:hover,
+.header .navi .navlinks .btn-box:focus {
+	background: none;
 }
-
 
 .header .navlinks .fa-solid:hover {
 	color: var(--neutral-clr-900);
@@ -372,18 +374,18 @@ p {
 	color: var(--neutral-clr-100);
 }
 
-.offer .offer-con .offer-title h2{
-  font-size: calc(var(--heading-200) + 1vw);
+.offer .offer-con .offer-title h2 {
+	font-size: calc(var(--heading-200) + 1vw);
 }
 
 .offer .offer-con .offer-list {
 	background: var(--neutral-clr-100);
-	transition: var(--transition);
+	transition: var(--transition), border 1s ease-in-out !important;
 }
 
 .offer .offer-con .offer-list:hover {
 	background: var(--neutral-clr-300);
-	border: 1px solid var(--secondary-clr);
+	border: 0.5px solid var(--secondary-clr);
 	filter: none;
 }
 /* offer ends */
@@ -404,7 +406,7 @@ p {
 }
 
 .courses .courses-con .course-card .course-img img {
-  aspect-ratio: 1.8/1 !important;
+	aspect-ratio: 1.8/1 !important;
 }
 .courses .courses-con .course-card .course-img .pop {
 	background: var(--neutral-clr-100);
@@ -450,6 +452,37 @@ p {
 	color: var(--neutral-clr-100);
 }
 /* banner ends */
+
+/* testimonials */
+
+.testimonials .testimonials-con {
+	grid-template-columns: 1fr;
+}
+
+.testimonials .testimonials-con .testimonials-card {
+	background: var(--neutral-clr-300);
+	grid-template-columns: 0.75fr 3.25fr;
+}
+
+.testimonials .testimonials-con .testimonials-card .testimonials-img img {
+	border: 3px solid var(--secondary-clr);
+}
+
+.testimonials .testimonials-con .testimonials-card .testimonials-text {
+	align-self: center;
+	text-align: left;
+}
+
+.testimonials .testimonials-con .testimonials-card .testimonials-text p {
+	font-size: 0.85rem;
+}
+
+.testimonials .testimonials-con .testimonials-card .testimonials-content {
+	grid-column: 1/5;
+	text-align: left;
+}
+
+/* testimonials ends */
 
 /* Faq */
 
@@ -555,8 +588,8 @@ footer .footer-bottom {
 		--body-text-500: 0.875rem;
 		--body-text-700: 0.75rem;
 	}
-	
-		/* header */
+
+	/* header */
 	.header {
 		align-items: center;
 		display: grid !important;
@@ -584,35 +617,43 @@ footer .footer-bottom {
 		position: relative;
 		width: auto;
 	}
-	
-	.header .navi .navlinks li{
-	  position: relative;
+
+	.header .navi .navlinks li {
+		position: relative;
 	}
 	.header .navi .navlinks li:hover {
-	  background: none;
-	  color: var(--neutral-clr-900);
+		background: none;
+		color: var(--neutral-clr-900);
 	}
-	
+
 	.header .navi .navlinks li::after {
-	  background: var(--primary-clr);
-	  border-radius: 2px;
-	  content: '';
-	  display: block;
-	  height: 4px;
-	  transition: var(--transition);
-	  width: 0%;
+		background: var(--primary-clr);
+		border-radius: 2px;
+		content: "";
+		display: block;
+		height: 4px;
+		transition: var(--transition);
+		width: 0%;
 	}
 
 	.header .navi .navlinks li:hover::after {
-	  width: 100%;
+		width: 100%;
 	}
-	
+
+	.header .navi .navlinks .btn-box:hover::after {
+		background: none;
+		border-radius: none;
+		/* content: ""; */
+		display: none;
+		width: 0%;
+	}
+
 	.header .navi .navlinks .btn-box {
 		margin-left: auto;
 	}
 	/* header ends */
-	
-		/* welcome-hero */
+
+	/* welcome-hero */
 	.welcome-hero {
 		grid-template-columns: repeat(2, 1fr);
 	}
@@ -634,13 +675,23 @@ footer .footer-bottom {
 	}
 	/* courses ends */
 
+	/* testimonials */
+
+	.testimonials .testimonials-con {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.testimonials .testimonials-con .testi-card {
+		padding: 1.5rem;
+	}
+
+	/* testimonials ends */
 	/* faq */
 	.faq-con {
 		grid-template-columns: repeat(2, 1fr);
 	}
 	/* faq ends */
-	
-		/* Footer*/
+
+	/* Footer*/
 	footer .footer-content {
 		align-items: start;
 		grid-template-columns: 2fr 1fr 1.5fr 2fr;
@@ -670,7 +721,6 @@ footer .footer-bottom {
 }
 
 @media screen and (min-width: 1024px) {
-
 	/* offer */
 	.offer .offer-con {
 		grid-template-columns: repeat(3, 1fr);
@@ -686,6 +736,4 @@ footer .footer-bottom {
 		grid-template-columns: repeat(3, 1fr);
 	}
 	/* courses ends */
-
-
 }
