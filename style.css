@@ -500,6 +500,24 @@ p {
 	overscroll-behavior-inline: contain;
 }
 
+.mentor .mentor-con::-webkit-scrollbar {
+	height: 12px;
+	width: 100% !important;
+}
+
+.mentor .mentor-con::-webkit-scrollbar-track {
+	background: var(--glass);
+	border-radius: 1rem;
+	opacity: 0.5 !important;
+}
+
+.mentor .mentor-con::-webkit-scrollbar-thumb {
+	background: var(--primary-clr) !important;
+	border-radius: 1rem;
+	border: 2px solid var(--neutral-clr-300) !important;
+	opacity: 0.5 !important;
+}
+
 .mentor .mentor-con .mentor-card {
 	--heading-400: 0.8rem;
 	--paragraph-400: 0.65rem;
