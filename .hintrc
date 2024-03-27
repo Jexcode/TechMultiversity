@@ -21,7 +21,8 @@
       {
         "ignore": [
           "-webkit-tap-highlight-color",
-          "backdrop-filter"
+          "backdrop-filter",
+          "overscroll-behavior-inline"
         ]
       }
     ]

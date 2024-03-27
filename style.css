@@ -347,6 +347,42 @@ p {
 
 /* header*/
 
+/* register */
+
+.register .sign-up .myform {
+	grid-template-columns: 1fr;
+}
+
+.register .myform input {
+	background: none;
+}
+
+.register .myform .myform-inputs {
+	border: 1px solid var(--neutral-clr-600);
+	border-radius: 4px;
+	padding: 0.75rem 1rem;
+	height: 46px;
+	transition: var(--transition);
+}
+
+.register .myform .myform-inputs:hover {
+	border: 1px solid var(--primary-clr);
+}
+
+.register .myform .myform-inputs .fa-solid {
+	cursor: pointer;
+}
+.register .myform .myform-inputs .fa-solid:hover {
+	color: var(--primary-clr);
+}
+
+.register .link-tap {
+	color: var(--primary-clr);
+	cursor: pointer;
+	text-decoration: underline;
+}
+/* register ends */
+
 /* Welcome hero */
 
 .welcome-hero {

@@ -42,10 +42,10 @@
 					<li class="p-3"><a href="#course">Courses</a></li>
 					<li class="p-3"><a href="#message">Contact Us</a></li>
 					<!-- cta button -->
-					<li class="btn-box py-2 px-3">
+					<!-- <li class="btn-box py-2 px-3">
 						<a class="btn btn-primary" href="#">Get Started</a>
 						<a class="btn btn-secondary" href="#">Login</a>
-					</li>
+					</li> -->
 					<i class="fa-solid fa-xmark"></i>
 				</ul>
 			</nav>
@@ -53,413 +53,151 @@
 		</header>
 		<!-- Header ends -->
 
-		<!-- welcome hero-->
-		<section
-			class="welcome-hero min-wid p-20 d-grid align-items-center justify-content-center"
-		>
-			<!-- welcome-text -->
-			<div class="welcome-text">
-				<h1 class="mb-3">
-					<span>Bridging</span> The Gap In <span>Learning</span>
-				</h1>
+		<!-- main -->
+		<main class="main d-grid p-4">
+			<!-- register form -->
 
-				<p class="mb-4">
-					"Prepare to embark on a seamless journey into online learning as we
-					construct 'Tech Multiversity.' Our site is under construction,
-					meticulously designed to connect you with a world of educational
-					opportunities. Stay tuned for the unveiling of our platform, where
-					learning knows no bounds."
-				</p>
+			<section class="register d-grid">
+				<!-- sign up -->
+				<div class="sign-up d-flex flex-column center">
+					<h2 class="title">Sign-up</h2>
+					<p class="text-center">
+						Brigde the gap in learning now and gain full access to learning
+						digital skillls.
+					</p>
 
-				<div class="btnbox d-flex">
-					<a class="btn btn-primary" href="#">Get Started</a>
-					<a class="btn btn-secondary" href="#">See Courses</a>
-				</div>
-			</div>
+					<!-- form -->
+					<form action="" class="myform d-flex flex-column w-100 gap-2 p-3">
+						<div class="d-grid">
+							<label for="fullName" class="form-label">Full Name</label>
+							<input
+								type="text"
+								class="myform-inputs"
+								id="fullName"
+								placeholder="Enter your full name"
+								required
+							/>
+						</div>
 
-			<!-- welcome-img -->
-			<div class="welcome-img">
-				<img src="img/hero.png" alt="Welcome to tech mulversity" width="100%" />
-			</div>
-		</section>
-		<!-- welcome hero ends -->
+						<div class="d-grid">
+							<label for="emailRegister" class="form-label"
+								>Email address</label
+							>
+							<input
+								type="email"
+								class="myform-inputs"
+								id="emailRegister"
+								placeholder="name@email.com"
+							/>
+						</div>
 
-		<!-- offer -->
-		<section class="offer min-wid d-flex center pb-5 p-20">
-			<div class="offer-con d-grid">
-				<!-- offer list -->
-				<div class="offer-title rounded-3 p-5">
-					<h2>What To Expect From Tech Multiversity</h2>
-				</div>
-				<!-- offer list -->
-				<div
-					class="offer-list d-flex flex-column align-items-center text-center shadowe rounded-3 p-4"
-				>
-					<img src="img/icon 1.svg" alt="certificate" width="100" />
-					<div class="offer-content">
-						<h3>Get Certificate</h3>
-						<p>
-							Add value to your certificates and increase your chance of getting
-							hired in your dream job.
-						</p>
-					</div>
-				</div>
-				<!-- offer list -->
-				<div
-					class="offer-list d-flex flex-column align-items-center text-center shadowe rounded-3 p-4"
-				>
-					<img src="img/icon 2.svg" alt="certificate" width="100" />
-					<div class="offer-content">
-						<h3>Amazing Instructor</h3>
-						<p>
-							Add value to your certificates and increase your chance of getting
-							hired in your dream job.
-						</p>
-					</div>
-				</div>
+						<div class="d-grid">
+							<label for="phoneNumber" class="form-label">Phone Number</label>
+							<input
+								type="tel"
+								class="myform-inputs"
+								id="phoneNumber"
+								placeholder="08123456789"
+								required
+							/>
+						</div>
 
-				<!-- offer list -->
-				<div
-					class="offer-list d-flex flex-column align-items-center text-center shadowe rounded-3 p-4"
-				>
-					<img src="img/icon 3.svg" alt="certificate" width="100" />
-					<div class="offer-content">
-						<h3>Video Lesson</h3>
-						<p>
-							Add value to your certificates and increase your chance of getting
-							hired in your dream job.
-						</p>
-					</div>
-				</div>
-
-				<!-- offer list -->
-				<div
-					class="offer-list d-flex flex-column align-items-center text-center shadowe rounded-3 p-4"
-				>
-					<img src="img/icon 4.svg" alt="certificate" width="100" />
-					<div class="offer-content">
-						<h3>Classroom chat</h3>
-						<p>
-							Add value to your certificates and increase your chance of getting
-							hired in your dream job.
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- offer ends-->
-
-		<!-- courses -->
-
-		<section
-			id="course"
-			class="courses p-20 pb-5 d-flex center flex-column gap-4"
-		>
-			<h3 class="title">Explore Courses Available</h3>
-			<!-- courses con -->
-			<div class="courses-con min-wid d-grid gap-4">
-				<!-- courses list -->
-				<div class="course-card d-grid gap-2 shadowe rounded-3 p-3">
-					<!-- courses img -->
-					<div class="course-img position-relative">
-						<img
-							src="img/Digital-marketing.jpeg"
-							class="rounded-2"
-							alt="digital marketing"
-							width="100%"
-						/>
-						<div class="pop position-absolute p-2 rounded-1">Recommended</div>
-					</div>
-					<!-- courses content -->
-					<div class="course-content d-grid gap-2">
-						<!-- courses text -->
-						<div class="course-text position-relative">
-							<h3>Digital Marketing</h3>
-							<div class="rating position-absolute">
-								<p><i class="fa-solid fa-star"></i> No rating yet</p>
+						<div class="d-grid">
+							<label for="passWord" class="form-label">Password</label>
+							<div class="myform-inputs d-flex">
+								<input
+									type="password"
+									id="passWord"
+									class="w-100 password"
+									placeholder="Create Password"
+									required
+								/>
+								<p>
+									<i class="fa-solid fa-eye-slash toggle-password"></i>
+								</p>
 							</div>
-							<p>Master the Art of Digital Marketing in Just six Months</p>
 						</div>
 
-						<!-- courses pricing and cta -->
-						<div class="course-price d-grid gap-1 align-items-center">
-							<h3>₦7000</h3>
-							<a class="btn btn-primary" href="#">Get Started</a>
-						</div>
-					</div>
-				</div>
-
-				<!-- courses list -->
-				<div class="course-card d-grid gap-2 shadowe rounded-3 p-3 opacity-50">
-					<!-- courses img -->
-					<div class="course-img position-relative">
-						<img
-							src="img/content-writer-photo.jpg"
-							class="rounded-2"
-							alt="content-writing"
-							width="100%"
-						/>
-						<div class="pop position-absolute p-2 rounded-1">
-							<i class="fa-solid fa-lock"></i> Locked
-						</div>
-					</div>
-					<!-- courses content -->
-					<div class="course-content d-grid gap-2">
-						<!-- courses text -->
-						<div class="course-text position-relative">
-							<h3>Content Writing</h3>
-							<div class="rating position-absolute">
-								<p><i class="fa-solid fa-star"></i>No rating yet</p>
+						<div class="d-grid">
+							<label for="confirmPassword" class="form-label"
+								>Confirm Password</label
+							>
+							<div class="myform-inputs d-flex">
+								<input
+									type="password"
+									id="confirmPassword"
+									placeholder="Confirm Password"
+									class="w-100 password"
+									required
+								/>
+								<p>
+									<i class="fa-solid fa-eye-slash toggle-password"></i>
+								</p>
 							</div>
-							<p>Master the Art of Content Writing in Just six Months</p>
 						</div>
+						<button type="submit" class="btn btn-primary mt-3">Sign up</button>
+					</form>
 
-						<!-- courses pricing and cta -->
-						<div class="course-price d-grid gap-1 align-items-center">
-							<h3>₦7000</h3>
-							<a class="btn btn-primary disabled" href="#">Get Started</a>
-						</div>
-					</div>
-
-					<!-- locked overlay -->
-					<div class="locked d-none opacity-100">
-						<i class="fa-solid fa-lock"></i>
-					</div>
+					<p>
+						Already have an account?
+						<span class="link-tap" id="loginBtn">Login</span>
+					</p>
 				</div>
 
-				<!-- courses list -->
-				<div class="course-card d-grid gap-2 shadowe rounded-3 p-3 opacity-50">
-					<!-- courses img -->
-					<div class="course-img position-relative">
-						<img
-							src="img/video-editing.jpg"
-							class="rounded-2"
-							alt="video-editing"
-							width="100%"
-						/>
-						<div class="pop position-absolute p-2 rounded-1">
-							<i class="fa-solid fa-lock"></i> Locked
+				<!-- login -->
+				<div class="login d-flex d-none flex-column center">
+					<h2 class="title">Welcome Back</h2>
+					<p class="text-center">
+						Brigde the gap in learning now and gain full access to learning
+						digital skillls.
+					</p>
+
+					<!-- form -->
+					<form action="" class="myform d-flex flex-column w-100 gap-2 p-3">
+						<div class="d-grid">
+							<label for="emailLogin" class="form-label">Email address</label>
+							<input
+								type="email"
+								class="myform-inputs"
+								id="emailLogin"
+								placeholder="name@email.com"
+							/>
 						</div>
-					</div>
-					<!-- courses content -->
-					<div class="course-content d-grid gap-2">
-						<!-- courses text -->
-						<div class="course-text position-relative">
-							<h3>Video Editing</h3>
-							<div class="rating position-absolute">
-								<p><i class="fa-solid fa-star"></i> No rating yet</p>
+
+						<div class="d-grid">
+							<label for="passwordLogin" class="form-label">Password</label>
+							<div class="myform-inputs d-flex">
+								<input
+									type="password"
+									id="passwordLogin"
+									class="w-100 password"
+									placeholder="Create Password"
+									required
+								/>
+								<p>
+									<i class="fa-solid fa-eye-slash toggle-password"></i>
+								</p>
 							</div>
-							<p>Master the Art of Video Editing in Just six Months</p>
+
+							<a href="#" class="link-tap text-decoration-none"
+								>Forgot Password?</a
+							>
 						</div>
 
-						<!-- courses pricing and cta -->
-						<div class="course-price d-grid gap-1 align-items-center">
-							<h3>₦7000</h3>
-							<a class="btn btn-primary disabled" href="#">Get Started</a>
-						</div>
-					</div>
+						<button type="submit" class="btn btn-primary mt-3">Login</button>
+					</form>
 
-					<!-- locked overlay -->
-					<div class="locked d-none opacity-100">
-						<i class="fa-solid fa-lock"></i>
-					</div>
+					<p>
+						New to Tech Multiversity?
+						<span class="link-tap" id="signUpBtn">Sign-up</span>
+					</p>
 				</div>
-			</div>
-		</section>
-		<!-- courses ends-->
+			</section>
 
-		<!-- banner -->
-		<section class="banner d-flex center p-4">
-			<!-- banner content-->
-			<div class="banner-content text-center">
-				<h2 class="title">Registration for SAP/2023/24</h2>
-				<p class="mb-3">
-					Lorem ipsum dolor sit amet consectetur. Velit velit enim elementum nec
-					lacinia eget pellentesque mauris. Ac nullam purus morbi neque.
-				</p>
-				<a class="btn btn-tertiary" href="#">Apply Now</a>
-			</div>
-		</section>
-		<!-- banner ends-->
-		<!-- Testimonials -->
-		<section class="testimonials min-wid p-4 text-center">
-			<h3 class="title">Testimonials</h3>
-			<p class="mb-4">
-				Here's what our students have to say about their transformative learning
-				experience. Discover the impact our courses have had on their lives
-			</p>
-			<div class="testimonials-con d-grid gap-3">
-				<!-- testimonials card -->
-				<div class="testimonials-card d-grid gap-1 p-3 rounded-3">
-					<div class="testimonials-img">
-						<img
-							src="img/testimonial-1.jpg"
-							alt="testimonials"
-							class="round"
-							width="50px"
-							height="50px"
-						/>
-					</div>
-					<div class="testimonials-text">
-						<h4 class="title">Wale Oluwaseun</h4>
-						<p>Software Developer</p>
-					</div>
-					<div class="testimonials-content">
-						<p>
-							Enrolling in courses at Tech Multiversity was a game changer for
-							me. It was absolutely a transformative experience.
-						</p>
-					</div>
-				</div>
-				<!-- testimonials card -->
+			<!-- register form rnds -->
+		</main>
+		<!-- main ends -->
 
-				<div class="testimonials-card d-grid gap-1 p-3 rounded-3">
-					<div class="testimonials-img">
-						<img
-							src="img/testimonial-2.jpg"
-							alt="testimonials"
-							class="round"
-							width="50px"
-							height="50px"
-						/>
-					</div>
-					<div class="testimonials-text">
-						<h4 class="title">Amirah Ibrahim</h4>
-						<p>Product Designer</p>
-					</div>
-					<div class="testimonials-content">
-						<p>
-							Exceptional courses! The practical insights and flexibile learning
-							structure have been instrumental in my professional growth.
-						</p>
-					</div>
-				</div>
-				<div class="testimonials-card d-grid gap-1 p-3 rounded-3">
-					<div class="testimonials-img">
-						<img
-							src="img/testimonial-3.jpg"
-							alt="testimonials"
-							class="round"
-							width="50px"
-							height="50px"
-						/>
-					</div>
-					<div class="testimonials-text">
-						<h4 class="title">Ezechukwu Emeka</h4>
-						<p>Digital Marketer</p>
-					</div>
-					<div class="testimonials-content">
-						<p>
-							Highly recommended! The personalised feedback and real world
-							application in the couuress have elevated my professional skills.
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- Testimonials ends -->
-		<!-- FAQ -->
-		<section class="faq min-wid p-4">
-			<!-- faq-con -->
-			<div class="faq-con d-grid align-items-start gap-3">
-				<!-- faq-img -->
-				<div class="faq-image">
-					<div class="faq-title">
-						<h3 class="title">Have A Question in Mind</h3>
-						<p>Have a question in mind, we got your answer right here</p>
-					</div>
-					<img src="img/Faq-image.svg" alt="faq-image" width="100%" />
-				</div>
-				<!-- faq-content -->
-				<div class="faq-content d-grid align-self-center gap-3">
-					<div class="faq-item shadowe">
-						<div
-							class="faq-question d-flex justify-content-between align-items-center"
-						>
-							<h4 class="mb-0">
-								What's the schedule and duration of each course?
-							</h4>
-							<i class="fa-solid fa-angle-down"></i>
-							<i class="fa-solid fa-angle-up"></i>
-						</div>
-						<div class="faq-ans">
-							<p>
-								The schedule and duration varies per each course based on the
-								curriculum and topics involved to be practiced.
-							</p>
-						</div>
-					</div>
-
-					<div class="faq-item shadowe">
-						<div
-							class="faq-question d-flex justify-content-between align-items-center"
-						>
-							<h4 class="mb-0">Are the courses in person or online?</h4>
-							<i class="fa-solid fa-angle-down"></i>
-							<i class="fa-solid fa-angle-up"></i>
-						</div>
-						<div class="faq-ans">
-							<p>
-								All courses are all online, giving students opportunities to
-								learn from the top best in the industry without having to battle
-								with tye barrier of distance or location.
-							</p>
-						</div>
-					</div>
-
-					<div class="faq-item shadowe">
-						<div
-							class="faq-question d-flex justify-content-between align-items-center"
-						>
-							<h4 class="mb-0">Are the courses in person or online?</h4>
-							<i class="fa-solid fa-angle-down"></i>
-							<i class="fa-solid fa-angle-up"></i>
-						</div>
-						<div class="faq-ans">
-							<p>
-								All courses are all online, giving students opportunities to
-								learn from the top best in the industry without having to battle
-								with tye barrier of distance or location.
-							</p>
-						</div>
-					</div>
-
-					<div class="faq-item shadowe">
-						<div
-							class="faq-question d-flex justify-content-between align-items-center"
-						>
-							<h4 class="mb-0">How much does a course cost?</h4>
-							<i class="fa-solid fa-angle-down"></i>
-							<i class="fa-solid fa-angle-up"></i>
-						</div>
-						<div class="faq-ans">
-							<p>
-								Depending on the course that a student has enrolled for, course
-								prices range from ₦7,000 - ₦21,000.
-							</p>
-						</div>
-					</div>
-
-					<div class="faq-item shadowe">
-						<div
-							class="faq-question d-flex justify-content-between align-items-center"
-						>
-							<h4 class="mb-0">Are the courses in person or online?</h4>
-							<i class="fa-solid fa-angle-down"></i>
-							<i class="fa-solid fa-angle-up"></i>
-						</div>
-						<div class="faq-ans">
-							<p>
-								To register for a course click on the link, fill in all the
-								required information, make payment and proceed to select the
-								course of your choice
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- FAQ -->
 		<!-- footer -->
 		<footer class="d-grid justify-content-center gap-3 p-4">
 			<div class="footer-content min-wid d-grid gap-1">
