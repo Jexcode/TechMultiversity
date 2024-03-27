@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&family=Kaushan+Script&family=Open+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&family=Kaushan+Script&family=Open+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700;800;900&family=Alfa+Slab+One:wght@400&display=swap");
 
 :root {
 	/*colors*/
@@ -16,6 +16,7 @@
 
 	--font-head: "Poppins", sans-serif;
 	--font-body: "Poppins", sans-serif;
+	--font-alfa: "Alfa Slab One", sans-serif;
 	--heading-100: 2.4rem;
 	--heading-200: 1.75rem;
 	--heading-300: 1.5rem;
@@ -24,7 +25,7 @@
 	--body-text-500: 0.875rem;
 	--body-text-700: 0.75rem;
 
-	--transition: all 0.75s ease-in-out;
+	--transition: all 0.75s ease-in-out !important;
 }
 
 *,
@@ -185,6 +186,11 @@ p {
 	}
 }
 /* animation ends*/
+.alfa {
+	font-family: var(--font-alfa);
+	font-weight: 400 !important;
+	text-transform: uppercase !important;
+}
 .min-wid {
 	margin: auto !important;
 	max-width: 1200px;
@@ -383,6 +389,11 @@ p {
 	transition: var(--transition), border 1s ease-in-out !important;
 }
 
+.offer .offer-con .offer-list h3 {
+	font-size: calc(var(--heading-400) - 0.5rem);
+	font-weight: 600;
+}
+
 .offer .offer-con .offer-list:hover {
 	background: var(--neutral-clr-300);
 	border: 0.5px solid var(--secondary-clr);
@@ -393,13 +404,38 @@ p {
 	grid-template-columns: 1fr;
 }
 
-.offer-2 .offer-text .title::before {
+.offer-2 .offer-text h3 {
+	padding-left: 1rem;
+	position: relative;
+}
+
+.offer-2 .offer-text h3 span {
+	font-size: calc(var(--heading-400) + 0.3vw);
+}
+
+.offer-2 .offer-text h3::before {
 	background: var(--primary-clr);
 	border-radius: 4px;
 	content: "";
 	display: block;
 	height: 100%;
 	width: 4px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.offer-2 .offer-text .our-offer {
+	color: var(--neutral-clr-600);
+}
+
+.offer-2 .offer-text .our-offer li {
+	list-style: url("img/Checkbox.svg");
+}
+
+.offer-2 .offer-text .our-offer .title {
+	color: var(--neutral-clr-900);
+	list-style: none;
 }
 /* offer ends */
 
@@ -449,6 +485,90 @@ p {
 	margin: 0 !important;
 }
 /* Courses ends */
+
+/* mentor */
+
+.mentor {
+	background: var(--neutral-clr-300);
+}
+
+.mentor .mentor-con {
+	grid-auto-flow: column;
+	grid-auto-columns: 46%;
+
+	overflow-x: auto;
+	overscroll-behavior-inline: contain;
+}
+
+.mentor .mentor-con .mentor-card {
+	--heading-400: 0.8rem;
+	--paragraph-400: 0.65rem;
+	--neutral-clr-600: #ffffffd2;
+
+	background-image: linear-gradient(
+			to bottom,
+			transparent,
+			transparent,
+			var(--neutral-clr-900)
+		),
+		var(--image);
+	/* background-image: url("img/benjamin-aduroja.jpg"); */
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: var(--neutral-clr-300);
+	height: 230px;
+	overflow: hidden;
+	transition: var(--transition);
+}
+
+.mentor .mentor-con .mentor-card:nth-child(1) {
+	--image: url("img/benjamin-aduroja.jpg");
+}
+.mentor .mentor-con .mentor-card:nth-child(2) {
+	--heading-400: 0.77rem;
+	--image: url("img/Oluwabunmi-Ogbontiba.jpg");
+}
+.mentor .mentor-con .mentor-card:nth-child(3) {
+	--image: url("img/jameelah\ sharrieff.jpg");
+}
+.mentor .mentor-con .mentor-card:nth-child(4) {
+	--image: url("img/Prof-Pierpaolo.jpg");
+}
+.mentor .mentor-con .mentor-card:nth-child(5) {
+	--image: url("img/uliana-pereskotska.png");
+}
+.mentor .mentor-con .mentor-card:nth-child(6) {
+	--image: url("img/eleftheria_egel.jpg");
+}
+
+.mentor .mentor-con .mentor-card .mentor-card-text {
+	font-size: var(--paragraph-400);
+	transform: translateY(65%);
+}
+
+.mentor .mentor-con .mentor-card .mentor-card-text h3::before {
+	background: var(--primary-clr);
+	border-radius: 3px;
+	content: "";
+	display: block;
+	height: 100%;
+	width: 3px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.mentor .mentor-con .mentor-card:hover {
+	transform: scale(1.025);
+}
+
+.mentor .mentor-con .mentor-card:hover .mentor-card-text {
+	transform: translateY(0);
+	transition: var(--transition);
+}
+
+/* mentor ends */
 
 /* banner */
 .banner {
@@ -692,6 +812,25 @@ footer .footer-bottom {
 	}
 	/* courses ends */
 
+	/* mentor */
+	.mentor .mentor-con {
+		grid-auto-columns: 25%;
+	}
+
+	.mentor .mentor-con .mentor-card {
+		--heading-400: 1rem;
+		--paragraph-400: 0.7rem;
+	}
+
+	.mentor .mentor-con .mentor-card:nth-child(2) {
+		--heading-400: 0.9rem;
+	}
+
+	.mentor .mentor-con .mentor-card .mentor-card-text {
+		transform: translateY(52%);
+	}
+	/* mentor ends */
+
 	/* testimonials */
 
 	.testimonials .testimonials-con {
@@ -753,4 +892,19 @@ footer .footer-bottom {
 		grid-template-columns: repeat(3, 1fr);
 	}
 	/* courses ends */
+
+	/* mentor */
+	.mentor .mentor-con {
+		grid-template-columns: repeat(6, 1fr);
+	}
+
+	.mentor .mentor-con .mentor-card .mentor-card-text {
+		transform: translateY(65%);
+	}
+
+	.mentor .mentor-con::-webkit-scrollbar {
+		display: none;
+	}
+
+	/* mentor ends */
 }
