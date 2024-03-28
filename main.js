@@ -66,6 +66,33 @@ logInBtn.addEventListener("click", () => {
 	}
 });
 
+// Password check match
+
+function checkPasswordMatch() {
+	let password = document.getElementById("passWord").value;
+	let confirmPassword = document.getElementById("confirmPassword").value;
+	let errorBox = document.getElementById("errorBox");
+
+	if (password !== confirmPassword) {
+		document.getElementById("errorBox").style.display = "block";
+		errorBox.innerHTML = "Passwords do not match";
+		errorBox.style.color = "red";
+		errorBox.style.fontSize = "0.75rem";
+		return false;
+	} else {
+		document.getElementById("errorBox").style.display = "none";
+		return true;
+	}
+}
+
+// stop form submit
+let signUpForm = document.getElementById("signUpForm");
+signUpForm.addEventListener("submit", function (event) {
+	if (!checkPasswordMatch()) {
+		event.preventDefault();
+	}
+});
+
 // password visibility
 
 function togglePasswordVisibility(inputId) {
