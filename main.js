@@ -25,6 +25,22 @@ li.forEach(function (link) {
 	});
 });
 
+//registration pop
+
+let startBtn = document.querySelectorAll(".startBtn");
+const register = document.querySelector(".register");
+const formBtn = document.querySelector("#formBtn");
+
+startBtn.forEach(function (start) {
+	start.addEventListener("click", () => {
+		register.classList.toggle("d-none");
+	});
+});
+
+formBtn.addEventListener("click", () => {
+	register.classList.toggle("d-none");
+});
+
 // faq
 
 const faqList = document.querySelectorAll(".faq-item");
