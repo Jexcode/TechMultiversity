@@ -52,8 +52,6 @@ const logIn = document.querySelector(".login");
 const signUpBtn = document.querySelector("#signUpBtn");
 const logInBtn = document.querySelector("#loginBtn");
 
-console.log(logIn);
-
 signUpBtn.addEventListener("click", () => {
 	if (signUp.classList.contains("d-none")) {
 		logIn.classList.toggle("d-none");
@@ -70,19 +68,27 @@ logInBtn.addEventListener("click", () => {
 
 // password visibility
 
-let passwordInput = document.querySelector(".password");
-let toggleIcon = document.querySelectorAll(".toggle-password");
+function togglePasswordVisibility(inputId) {
+	let passwordInput = document.getElementById(inputId);
+	let toggleBtn = passwordInput.nextElementSibling;
 
-toggleIcon.addEventListener("click", togglePasswordVisibility);
-
-toggleIcon.forEach(function togglePasswordVisibility() {
 	if (passwordInput.type === "password") {
 		passwordInput.type = "text";
-		toggleIcon.classList.remove("fa-eye-slash");
-		toggleIcon.classList.add("fa-eye");
 	} else {
 		passwordInput.type = "password";
-		toggleIcon.classList.remove("fa-eye");
-		toggleIcon.classList.add("fa-eye-slash");
 	}
+}
+
+let toggleIcons = document.querySelectorAll(".toggle-password");
+
+toggleIcons.forEach((icon) => {
+	icon.addEventListener("click", () => {
+		if (icon.classList.contains("fa-eye-slash")) {
+			icon.classList.remove("fa-eye-slash");
+			icon.classList.add("fa-eye");
+		} else {
+			icon.classList.remove("fa-eye");
+			icon.classList.add("fa-eye-slash");
+		}
+	});
 });
