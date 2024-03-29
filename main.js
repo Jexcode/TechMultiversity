@@ -25,20 +25,54 @@ li.forEach(function (link) {
 	});
 });
 
+// registration
+
+const signUp = document.querySelector(".sign-up");
+const logIn = document.querySelector(".login");
+const signUpBtn = document.querySelector("#signUpBtn");
+const logInBtn = document.querySelector("#loginBtn");
+
+signUpBtn.addEventListener("click", () => {
+	if (signUp.classList.contains("d-none")) {
+		logIn.classList.toggle("d-none");
+		signUp.classList.toggle("d-none");
+	}
+});
+
+logInBtn.addEventListener("click", () => {
+	if (logIn.classList.contains("d-none")) {
+		signUp.classList.toggle("d-none");
+		logIn.classList.toggle("d-none");
+	}
+});
+
 //registration pop
 
 let startBtn = document.querySelectorAll(".startBtn");
+let returnBtn = document.querySelector(".returnBtn");
 const register = document.querySelector(".register");
 const formBtn = document.querySelector("#formBtn");
 
 startBtn.forEach(function (start) {
 	start.addEventListener("click", () => {
 		register.classList.toggle("d-none");
+		if (signUp.classList.contains("d-none")) {
+			logIn.classList.toggle("d-none");
+			signUp.classList.toggle("d-none");
+		}
 	});
 });
 
 formBtn.addEventListener("click", () => {
 	register.classList.toggle("d-none");
+});
+returnBtn.addEventListener("click", () => {
+	register.classList.toggle("d-none");
+
+	if (logIn.classList.contains("d-none")) {
+		signUp.classList.toggle("d-none");
+		logIn.classList.toggle("d-none");
+	}
 });
 
 // faq
@@ -59,27 +93,6 @@ faqList.forEach(function (list) {
 
 		list.classList.toggle("show-ans");
 	});
-});
-
-// registration
-
-const signUp = document.querySelector(".sign-up");
-const logIn = document.querySelector(".login");
-const signUpBtn = document.querySelector("#signUpBtn");
-const logInBtn = document.querySelector("#loginBtn");
-
-signUpBtn.addEventListener("click", () => {
-	if (signUp.classList.contains("d-none")) {
-		logIn.classList.toggle("d-none");
-		signUp.classList.toggle("d-none");
-	}
-});
-
-logInBtn.addEventListener("click", () => {
-	if (logIn.classList.contains("d-none")) {
-		signUp.classList.toggle("d-none");
-		logIn.classList.toggle("d-none");
-	}
 });
 
 // Password check match

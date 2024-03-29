@@ -391,6 +391,15 @@ p {
 	border-bottom: 1px solid var(--glass);
 }
 
+.register #formBtn {
+	transition: var(--transition);
+}
+
+.register #formBtn:hover {
+	color: var(--secondary-clr);
+	transform: rotate(360deg);
+}
+
 .register .register-bottom {
 	border-top: 1px solid var(--glass);
 }
