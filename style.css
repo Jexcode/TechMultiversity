@@ -448,6 +448,12 @@ p {
 .welcome-hero .welcome-text h1 span:last-child {
 	color: var(--primary-clr);
 }
+.welcome-hero .welcome-text h2 span:first-child {
+	color: var(--secondary-clr);
+}
+.welcome-hero .welcome-text h2 span:last-child {
+	color: var(--primary-clr);
+}
 
 .welcome-hero .welcome-text .btnbox {
 	gap: 1rem;
@@ -643,6 +649,12 @@ p {
 	--image: url("img/uliana-pereskotska.png");
 }
 .mentor .mentor-con .mentor-card:nth-child(6) {
+	--image: url("img/eleftheria_egel.jpg");
+}
+.mentor .mentor-con .mentor-card:nth-child(7) {
+	--image: url("img/eleftheria_egel.jpg");
+}
+.mentor .mentor-con .mentor-card:nth-child(8) {
 	--image: url("img/eleftheria_egel.jpg");
 }
 
@@ -1008,8 +1020,17 @@ footer .footer-bottom {
 	/* courses ends */
 
 	/* mentor */
+	.mentors {
+		background: var(--neutral-clr-100);
+	}
+
 	.mentor .mentor-con {
 		grid-template-columns: repeat(6, 1fr);
+	}
+
+	.mentor #mentorCon {
+		grid-template-columns: initial;
+		grid-auto-columns: 15%;
 	}
 
 	.mentor .mentor-con .mentor-card .mentor-card-text {
