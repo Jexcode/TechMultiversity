@@ -22,7 +22,13 @@
         "ignore": [
           "-webkit-tap-highlight-color",
           "backdrop-filter",
-          "overscroll-behavior-inline"
+          "overscroll-behavior-inline",
+          "text-underline-offset",
+          "overflow-anchor",
+          "text-decoration-skip-ink",
+          "-webkit-overflow-scrolling",
+          "-webkit-text-size-adjust",
+          "text-align: -webkit-match-parent"
         ]
       }
     ]

@@ -1,5 +1,6 @@
 // Nav and menu controll
 
+const header = document.getElementById("header");
 const menuIcon = document.querySelector(".fa-bars");
 const nav = document.querySelector("nav");
 const overlay = document.querySelector(".overlay");
@@ -25,25 +26,108 @@ li.forEach(function (link) {
 	});
 });
 
+// scroll for nav
+
+window.addEventListener("scroll", () => {
+	const scrollPosition = window.scrollY;
+
+	if (scrollPosition > 50) {
+		// Change 50 to the scroll position where you want to add the class
+		header.classList.add("buttom-line");
+	} else {
+		header.classList.remove("buttom-line");
+	}
+});
+
+// height generation for nav
+
+let headerHeight = header.offsetHeight;
+
+// Set the value of the CSS variable
+const root = document.documentElement;
+root.style.setProperty("--nav-h", headerHeight + "px");
+
+console.log(headerHeight);
+
 // registration
 
 const signUp = document.querySelector(".sign-up");
 const logIn = document.querySelector(".login");
 const signUpBtn = document.querySelector("#signUpBtn");
 const logInBtn = document.querySelector("#loginBtn");
+const resetPasswordBtn = document.querySelector("#resetPasswordBtn");
+const passwordReset = document.querySelector(".password-reset");
+const passwordResetBtn = document.querySelector("#passwordResetBtn");
+const registerBottom = document.querySelector(".register-bottom");
+
+let oldButtom = `
+  <p>I accept Tech Multiversity's
+	<a href="#" class="text-decoration-underline">Terms of Service</a> and <a href="#" class="text-decoration-underline">Privacy Policy</a>.</p>
+
+	<p>Having troubles logging in?
+	<a href="#" class="text-decoration-underline">Contact support</a>
+	</p>
+	`;
 
 signUpBtn.addEventListener("click", () => {
 	if (signUp.classList.contains("d-none")) {
-		logIn.classList.toggle("d-none");
+		logIn.classList.add("d-none");
 		signUp.classList.toggle("d-none");
+		passwordReset.classList.add("d-none");
+	}
+
+	if (registerBottom.innerHTML !== oldButtom) {
+		registerBottom.innerHTML = oldButtom;
+	} else {
+		registerBottom.innerHTML = oldButtom;
 	}
 });
 
 logInBtn.addEventListener("click", () => {
 	if (logIn.classList.contains("d-none")) {
-		signUp.classList.toggle("d-none");
+		signUp.classList.add("d-none");
 		logIn.classList.toggle("d-none");
+		passwordReset.classList.add("d-none");
 	}
+
+	if (registerBottom.innerHTML !== oldButtom) {
+		registerBottom.innerHTML = oldButtom;
+	} else {
+		registerBottom.innerHTML = oldButtom;
+	}
+});
+
+resetPasswordBtn.addEventListener("click", () => {
+	if (passwordReset.classList.contains("d-none")) {
+		logIn.classList.add("d-none");
+		signUp.classList.add("d-none");
+		passwordReset.classList.toggle("d-none");
+
+		let newButtom = `
+		   <p>Back to
+			<span class='link-tap' id='backToLogin'>Login</span></p>
+			`;
+
+		if (registerBottom.innerHTML !== newButtom) {
+			registerBottom.innerHTML = newButtom;
+		}
+	}
+
+	const backToLogin = document.querySelector("#backToLogin");
+
+	backToLogin.addEventListener("click", () => {
+		if (logIn.classList.contains("d-none")) {
+			signUp.classList.add("d-none");
+			logIn.classList.toggle("d-none");
+			passwordReset.classList.add("d-none");
+		}
+
+		if (registerBottom.innerHTML !== oldButtom) {
+			registerBottom.innerHTML = oldButtom;
+		} else {
+			registerBottom.innerHTML = oldButtom;
+		}
+	});
 });
 
 //registration pop

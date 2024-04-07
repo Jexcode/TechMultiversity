@@ -30,7 +30,8 @@
 	<body>
 		<!-- Header -->
 		<header
-			class="header position-fixed w-100 d-flex justify-content-between shadowe align-items-center"
+			id="header"
+			class="header position-fixed w-100 d-flex justify-content-between align-items-center"
 		>
 			<a href="./"
 				><img
@@ -223,9 +224,9 @@
 								</p>
 							</div>
 
-							<a href="#" class="link-tap text-decoration-none"
-								>Forgot Password?</a
-							>
+							<div id="resetPasswordBtn" class="link-tap text-decoration-none">
+								Forgot Password?
+							</div>
 						</div>
 
 						<button type="submit" class="btn btn-primary mt-3">Login</button>
@@ -235,12 +236,36 @@
 						New to Tech Multiversity?
 						<span class="link-tap" id="signUpBtn">Sign-up</span>
 					</p>
-					<p class="text-center my-3">
-						I accept Tech Multiversity's
-						<a href="#" class="text-decoration-underline">Terms of Service</a>
-						and
-						<a href="#" class="text-decoration-underline">Privacy Policy</a>.
+				</div>
+
+				<!-- forgot password -->
+				<div class="password-reset min-wid d-flex d-none flex-column center">
+					<h2 class="title">Forgot Password</h2>
+					<p class="text-center">
+						Enter the email address you use on Tech Multiversity. We'll send you
+						a link to reset your password.
 					</p>
+
+					<!-- form -->
+					<form action="" class="myform d-flex flex-column w-100 gap-2 p-3">
+						<div class="d-grid">
+							<label for="emailLogin" class="form-label title"
+								>Email address</label
+							>
+							<input
+								type="email"
+								class="myform-inputs"
+								id="emailReset"
+								autocomplete="email"
+								required
+								placeholder="name@email.com"
+							/>
+						</div>
+
+						<button type="submit" class="btn btn-primary mt-3">
+							Reset Password
+						</button>
+					</form>
 				</div>
 
 				<div class="register-bottom mt-3 py-3 text-center">
@@ -262,7 +287,7 @@
 		<!-- register form ends -->
 
 		<!-- FAQ -->
-		<section class="faq min-wid p-4">
+		<section class="faq min-wid p-4 m-nav">
 			<!-- faq-con -->
 			<div class="faq-con d-grid align-items-start gap-3">
 				<!-- faq-img -->
