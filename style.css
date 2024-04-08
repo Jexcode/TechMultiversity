@@ -267,7 +267,7 @@ p {
 
 .buttom-line {
 	border-bottom: 1px solid var(--glass);
-	filter: drop-shadow(0px 2px 0.25rem var(--glass));
+	box-shadow: 0px 2px 0.25rem var(--glass);
 }
 
 .title {
@@ -301,6 +301,7 @@ p {
 
 .header .fa-solid {
 	color: var(--secondary-clr);
+	cursor: pointer;
 	font-size: 2.5rem;
 }
 
