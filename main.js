@@ -135,6 +135,7 @@ resetPasswordBtn.addEventListener("click", () => {
 let startBtn = document.querySelectorAll(".startBtn");
 let returnBtn = document.querySelector(".returnBtn");
 const register = document.querySelector(".register");
+const registerOverlay = document.querySelector(".register-overlay");
 const formBtn = document.querySelector("#formBtn");
 
 startBtn.forEach(function (start) {
@@ -148,6 +149,10 @@ startBtn.forEach(function (start) {
 });
 
 formBtn.addEventListener("click", () => {
+	register.classList.toggle("d-none");
+});
+
+registerOverlay.addEventListener("click", () => {
 	register.classList.toggle("d-none");
 });
 returnBtn.addEventListener("click", () => {
