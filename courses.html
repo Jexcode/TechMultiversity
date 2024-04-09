@@ -289,7 +289,7 @@
 
 		<section
 			id="course"
-			class="courses p-20 pb-5 m-nav d-flex center flex-column gap-4"
+			class="courses white p-20 pb-5 m-nav d-flex center flex-column gap-4"
 		>
 			<h3 class="title">Explore Courses Available</h3>
 			<!-- courses con -->
@@ -524,5 +524,18 @@
 
 		<script src="./bootstrap/bootstrap.min.js"></script>
 		<script src="./main.js"></script>
+		<script>
+			let courseCon = document.querySelector("#course");
+			window.addEventListener("scroll", () => {
+				const scrollPosition = window.scrollY;
+
+				if (scrollPosition > 50) {
+					// Change 50 to the scroll position where you want to add the class
+					courseCon.classList.remove("white");
+				} else {
+					courseCon.classList.add("white");
+				}
+			});
+		</script>
 	</body>
 </html>

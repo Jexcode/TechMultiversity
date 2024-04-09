@@ -234,6 +234,10 @@ p {
 	margin-top: var(--nav-h) !important;
 }
 
+.white {
+	background: var(--neutral-clr-100) !important;
+}
+
 .btn {
 	border: none;
 	font-size: var(--body-text-500);
