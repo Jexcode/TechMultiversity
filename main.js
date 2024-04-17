@@ -47,8 +47,6 @@ let headerHeight = header.offsetHeight;
 const root = document.documentElement;
 root.style.setProperty("--nav-h", headerHeight + "px");
 
-console.log(headerHeight);
-
 // registration
 
 const signUp = document.querySelector(".sign-up");
